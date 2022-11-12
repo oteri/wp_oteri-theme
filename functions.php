@@ -1,5 +1,5 @@
 <?php
- function oteri_theme_customizer_options($wp_customize){
+ function oteri_banner_option($wp_customize){
  //=================================================================
  // Add Banner Uploader 
  //=================================================================
@@ -22,4 +22,4 @@
  
 }
  
-add_action( 'customize_register', 'oteri_theme_customizer_options' );
+add_action( 'customize_register', 'oteri_banner_option' );
