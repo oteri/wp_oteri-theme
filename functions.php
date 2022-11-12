@@ -1,4 +1,16 @@
-<?php 
+<?php
+function oteri_custom_header_setup() {
+	$args = array(
+		'default-image'      => get_template_directory_uri() . 'img/default-image.jpg',
+		'default-text-color' => '000',
+		'width'              => 1000,
+		'height'             => 250,
+		'flex-width'         => true,
+		'flex-height'        => true,
+	);
+	add_theme_support( 'custom-header', $args );
+}
+
 function add_customization_panel($wp_customize){
     $wp_customize->add_panel( 'oteri_option_panel', array(
         'title' => 'Customize oteri theme',
@@ -41,24 +53,7 @@ function add_customization_panel($wp_customize){
     )));
 
 //Banner
-    $wp_customize->add_setting( 'oteri_banner', array(
-        'default' => "", // Add Default Image URL 
-        'sanitize_callback' => 'esc_url_raw'
-    ));
- 
-    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'oteri_banner_control', array(
-        'label' => 'Upload Banner',
-        'section' => 'oteri_front_page_assets',
-        'settings' => 'oteri_banner',
-        'button_labels' => array(// All These labels are optional
-                    'select' => 'Select Image',
-                    'remove' => 'Remove Image',
-                    'change' => 'Change Image',
-                    )
-    )));
-
-
- }
+  }
 
  //=================================================================
  // Add Social network profiles
@@ -91,6 +86,7 @@ function add_customization_panel($wp_customize){
             ));
     }
 }
+add_action( 'after_setup_theme', 'oteri_custom_header_setup' );
 add_action( 'customize_register', 'add_customization_panel' );
 add_action( 'customize_register', 'oteri_banner_option' );
 add_action( 'customize_register', 'oteri_social_network_options' );
