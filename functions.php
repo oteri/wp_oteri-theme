@@ -54,8 +54,29 @@ function add_customization_panel($wp_customize){
                     )
     )));
 
-//Banner
   }
+
+//=================================================================
+// Add Description 
+//=================================================================
+function oteri_description_option($wp_customize){
+//Description    
+    $wp_customize->add_setting( 'oteri_description' , array(
+            'default'           => '',
+            'type'              => 'theme_mod',
+            'capability'        => 'edit_theme_options',           
+        ) );
+ 
+    $wp_customize->add_control( 'oteri_description', array(
+            'label'             => 'Description',
+            'description'       => 'Put a description of yourself',
+            'section'           => 'oteri_front_page_assets',
+            'settings'          => 'oteri_description',
+            'type'              => 'textarea',
+        ) );
+
+  }
+
 
  //=================================================================
  // Add Social network profiles
@@ -91,4 +112,5 @@ function add_customization_panel($wp_customize){
 add_action( 'after_setup_theme', 'oteri_custom_header_setup' );
 add_action( 'customize_register', 'add_customization_panel' );
 add_action( 'customize_register', 'oteri_profile_option' );
+add_action( 'customize_register', 'oteri_description_option' );
 add_action( 'customize_register', 'oteri_social_network_options' );
