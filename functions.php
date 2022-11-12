@@ -1,10 +1,8 @@
 <?php
- 
+ function oteri_theme_customizer_options($wp_customize){
  //=================================================================
  // Add Banner Uploader 
  //=================================================================
-function oteri_theme_customizer_options($wp_customize){
- 
     $wp_customize->add_setting( 'oteri_banner', array(
         'default' => get_theme_file_uri('assets/image/banner.jpg'), // Add Default Image URL 
         'sanitize_callback' => 'esc_url_raw'
