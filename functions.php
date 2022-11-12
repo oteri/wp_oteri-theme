@@ -19,12 +19,14 @@ function add_customization_panel($wp_customize){
         'theme_supports' => '',
         'active_callback' => ''
     ));
-
 }
+
+
+
 //=================================================================
-// Add Banner and Profile picture Uploader 
+// Add Profile picture Uploader 
 //=================================================================
- function oteri_banner_option($wp_customize){
+ function oteri_profile_option($wp_customize){
     $wp_customize->add_section( 'oteri_front_page_assets', array(
         'title' => 'Home Page',
         'description' => 'Customize the front page',
@@ -88,5 +90,5 @@ function add_customization_panel($wp_customize){
 }
 add_action( 'after_setup_theme', 'oteri_custom_header_setup' );
 add_action( 'customize_register', 'add_customization_panel' );
-add_action( 'customize_register', 'oteri_banner_option' );
+add_action( 'customize_register', 'oteri_profile_option' );
 add_action( 'customize_register', 'oteri_social_network_options' );
