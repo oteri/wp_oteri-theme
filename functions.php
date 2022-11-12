@@ -109,7 +109,7 @@ function oteri_description_option($wp_customize){
             ));
     }
 }
-add_action( 'after_setup_theme', 'oteri_custom_header_setup' );
+add_action( 'after_setup_theme',  'oteri_custom_header_setup' );
 add_action( 'customize_register', 'add_customization_panel' );
 add_action( 'customize_register', 'oteri_profile_option' );
 add_action( 'customize_register', 'oteri_description_option' );
