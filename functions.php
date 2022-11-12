@@ -23,6 +23,23 @@ function add_customization_panel($wp_customize){
         'description_hidden' => false
     ));
 
+//Profile    
+    $wp_customize->add_setting( 'oteri_profile_photo', array(
+        'default' => "", // Add Default Image URL 
+        'sanitize_callback' => 'esc_url_raw'
+    ));
+ 
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'oteri_profile_photo', array(
+        'label' => 'Upload Profile Photo',
+        'section' => 'oteri_front_page_assets',
+        'settings' => 'oteri_profile_photo',
+        'button_labels' => array(// All These labels are optional
+                    'select' => 'Select Image',
+                    'remove' => 'Remove Image',
+                    'change' => 'Change Image',
+                    )
+    )));
+
 //Banner
     $wp_customize->add_setting( 'oteri_banner', array(
         'default' => "", // Add Default Image URL 
@@ -43,9 +60,9 @@ function add_customization_panel($wp_customize){
 
  }
 
-    //=================================================================
-    // Add Social network profiles
-    //=================================================================
+ //=================================================================
+ // Add Social network profiles
+ //=================================================================
  function oteri_social_network_options($wp_customize){
     $wp_customize->add_section( 'oteri_customization', array(
         'title' => 'Social network profiles',
