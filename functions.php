@@ -3,8 +3,8 @@ function oteri_custom_header_setup() {
 	$args = array(
 		'default-image'      => get_template_directory_uri() . 'img/default-image.jpg',
 		'default-text-color' => '000',
-		'width'              => 1000,
-		'height'             => 250,
+		'width'              => 1280,
+		'height'             => 426,
 		'flex-width'         => true,
 		'flex-height'        => true,
 	);
