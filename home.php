@@ -9,6 +9,8 @@
         <?php wp_head(); ?>
     </head>
 
+    
+<div class=header_container><img alt="" src="<?php header_image(); ?>" ></div>
 <?
 $supported_social_networks = array("Github", "Linkedin", "Twitter", "Medium");
 foreach ($supported_social_networks as $network) { 
