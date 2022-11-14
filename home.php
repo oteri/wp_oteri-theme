@@ -11,6 +11,7 @@
 
     
 <div class=header_container><img alt="" src="<?php header_image(); ?>" ></div>
+<img class="profile_photo" alt="" src="<?php echo get_theme_mod("oteri_profile_photo"); ?>">
 <?
 $supported_social_networks = array("Github", "Linkedin", "Twitter", "Medium");
 foreach ($supported_social_networks as $network) { 
