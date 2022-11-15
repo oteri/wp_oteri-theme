@@ -34,3 +34,14 @@ body {
 .header_container>img {
     width: 100%;
 }
+
+.social_network_profiles_menu {
+    width: 227px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.item img {
+    width: 3em;
+    height: 3em;
+}
