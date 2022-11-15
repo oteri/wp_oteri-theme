@@ -143,3 +143,19 @@ function oteri_paper_post_type() {
 }
 add_action('init', 'oteri_paper_post_type');
 
+function oteri_software_post_type() {
+    //Registers a category for the post about papers
+	register_post_type('software',
+		array(
+			'labels'      => array(
+				'name'          => __( 'Softwares', 'textdomain' ),
+				'singular_name' => __( 'software',  'textdomain' ),
+			),
+			'public'      => true,
+			'has_archive' => false, //true
+//			'rewrite'     => array( 'slug' => 'software' ), // my custom slug
+		)
+	);
+}
+add_action('init', 'oteri_software_post_type');
+
