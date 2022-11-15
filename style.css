@@ -29,10 +29,29 @@ body {
 .header_container {
     height: 22em;
     overflow: hidden;
+    position: relative;
 }
 
 .header_container>img {
     width: 100%;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 5px;
+    right: 0px;
+}
+
+.menu a {
+    color: white;
+    font-weight: bold;
+}
+
+.menu>.item {
+    width: 5em;
+    text-align: center;
 }
 
 .social_network_profiles_menu {
