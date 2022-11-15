@@ -125,3 +125,21 @@ function add_theme_scripts() {
 	//wp_enqueue_script( 'script', get_template_directory_uri() . '/js/script.js', array( 'jquery' ), 1.1, true );
 }
 add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
+
+
+//Registers a category for the post about papers
+function oteri_paper_post_type() {
+	register_post_type('paper',
+		array(
+			'labels'      => array(
+				'name'          => __( 'Papers', 'textdomain' ),
+				'singular_name' => __( 'Paper',  'textdomain' ),
+			),
+			'public'      => true,
+			'has_archive' => false, //true
+//			'rewrite'     => array( 'slug' => 'papers' ), // my custom slug
+		)
+	);
+}
+add_action('init', 'oteri_paper_post_type');
+
