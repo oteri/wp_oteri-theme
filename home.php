@@ -44,14 +44,10 @@ if ( $post_types ) { // If there are any custom public post types.
 <?php
       $supported_social_networks = array("Github", "Linkedin", "Twitter", "Medium");
       foreach ($supported_social_networks as $network) { 
-foreach ($supported_social_networks as $network) { 
-      foreach ($supported_social_networks as $network) { 
         $name = 'oteri_'. strtolower($network);
         $url = get_theme_mod($name);
         if($url=="")
-        continue;  
-      continue;  
-        continue;  
+            continue;  
         $src = get_template_directory_uri().'/img/'.$network.'.png';
         echo '<div class=item><a target=_blank href='.$url.'><img src='.$src.'></img></a></div>';
       }
