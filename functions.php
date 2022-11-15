@@ -149,7 +149,7 @@ function oteri_software_post_type() {
 		array(
 			'labels'      => array(
 				'name'          => __( 'Softwares', 'textdomain' ),
-				'singular_name' => __( 'software',  'textdomain' ),
+				'singular_name' => __( 'Software',  'textdomain' ),
 			),
 			'public'      => true,
 			'has_archive' => false, //true
