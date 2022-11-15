@@ -129,7 +129,7 @@ add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
 
 //Registers a category for the post about papers
 function oteri_paper_post_type() {
-	register_post_type('paper',
+	register_post_type('Paper',
 		array(
 			'labels'      => array(
 				'name'          => __( 'Papers', 'textdomain' ),
@@ -145,7 +145,7 @@ add_action('init', 'oteri_paper_post_type');
 
 function oteri_software_post_type() {
     //Registers a category for the post about papers
-	register_post_type('software',
+	register_post_type('Software',
 		array(
 			'labels'      => array(
 				'name'          => __( 'Softwares', 'textdomain' ),
