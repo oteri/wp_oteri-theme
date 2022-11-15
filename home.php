@@ -37,18 +37,27 @@ if ( $post_types ) { // If there are any custom public post types.
  echo "</div>";
 ?>
 </div>
-<img class="profile_photo" alt="" src="<?php echo get_theme_mod("oteri_profile_photo"); ?>">
-<div class="description"><?php echo get_theme_mod("oteri_description") ?></div>
+
+<main>
+<div class=profile_photo_container><img class="profile_photo" alt="" src="<?php echo get_theme_mod("oteri_profile_photo"); ?>">
 <div class=social_network_profiles_menu>
-<?
-$supported_social_networks = array("Github", "Linkedin", "Twitter", "Medium");
+<?php
+      $supported_social_networks = array("Github", "Linkedin", "Twitter", "Medium");
+      foreach ($supported_social_networks as $network) { 
 foreach ($supported_social_networks as $network) { 
-  $name = 'oteri_'. strtolower($network);
-  $url = get_theme_mod($name);
-  if($url=="")
+      foreach ($supported_social_networks as $network) { 
+        $name = 'oteri_'. strtolower($network);
+        $url = get_theme_mod($name);
+        if($url=="")
+        continue;  
       continue;  
-  $src = get_template_directory_uri().'/img/'.$network.'.png';
-  echo '<div class=item><a target=_blank href='.$url.'><img src='.$src.'></img></a></div>';
-}
+        continue;  
+        $src = get_template_directory_uri().'/img/'.$network.'.png';
+        echo '<div class=item><a target=_blank href='.$url.'><img src='.$src.'></img></a></div>';
+      }
 ?>
 </div>
+</div>
+
+<div class="description"><?php echo get_theme_mod("oteri_description") ?></div>
+</main>

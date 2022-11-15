@@ -64,3 +64,16 @@ body {
     width: 3em;
     height: 3em;
 }
+
+main {
+    display: flex;
+    margin-top: 1em;
+}
+
+.description>p {
+    font-size: x-large;
+}
+
+.description {
+    margin: 6em;
+}
