@@ -12,9 +12,6 @@
     
 <div class=header_container>
   <img alt="" src="<?php header_image(); ?>" >
-
-
-
 <?php
 $menu=array('About');
 $args = array(
@@ -39,15 +36,6 @@ if ( $post_types ) { // If there are any custom public post types.
  }
  echo "</div>";
 ?>
-
-
-
-
-
-
-
-
-
 </div>
 <img class="profile_photo" alt="" src="<?php echo get_theme_mod("oteri_profile_photo"); ?>">
 <div class="description"><?php echo get_theme_mod("oteri_description") ?></div>
