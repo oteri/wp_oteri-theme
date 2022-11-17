@@ -129,33 +129,32 @@ add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
 
 //Registers a category for the post about papers
 function oteri_paper_post_type() {
-	register_post_type('Paper',
+	register_post_type('papers',
 		array(
 			'labels'      => array(
 				'name'          => __( 'Papers', 'textdomain' ),
 				'singular_name' => __( 'Paper',  'textdomain' ),
 			),
 			'public'      => true,
-			'has_archive' => false, //true
-//			'rewrite'     => array( 'slug' => 'papers' ), // my custom slug
+			'has_archive' => true,          
+			'rewrite'     => array( 'slug' => 'papers' ), // my custom slug
 		)
 	);
 }
 add_action('init', 'oteri_paper_post_type');
 
 function oteri_software_post_type() {
-    //Registers a category for the post about papers
-	register_post_type('Software',
-		array(
-			'labels'      => array(
-				'name'          => __( 'Softwares', 'textdomain' ),
-				'singular_name' => __( 'Software',  'textdomain' ),
-			),
-			'public'      => true,
-			'has_archive' => false, //true
-//			'rewrite'     => array( 'slug' => 'software' ), // my custom slug
-		)
-	);
+    register_post_type('softwares',
+        array(
+            'labels'      => array(
+                'name'          => __( 'Softwares', 'textdomain' ),
+                'singular_name' => __( 'Softwares',  'textdomain' ),
+            ),
+            'public'      => true,
+            'has_archive' => true,          
+            'rewrite'     => array( 'slug' => 'softwares' ), // my custom slug
+        )
+    );
 }
 add_action('init', 'oteri_software_post_type');
 
