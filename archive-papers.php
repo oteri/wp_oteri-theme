@@ -1,3 +1,48 @@
-<div>
-    Ciao2
-</div>
+<?php include('php/utils.php');?>
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title><?php wp_title(''); ?></title>
+  <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css">
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri().'/css/papers.css' ?>" type="text/css">
+  
+  <?php wp_head(); ?>
+</head>
+<body>
+
+  <header id="header">
+    <?php get_navigation_menu(); ?>
+  </header>
+
+    <div id="wrap">
+        <section id="content">
+        <?php if(have_posts()) : ?>
+            <div id="loop">
+               <?php while(have_posts()) : the_post(); ?>
+                   <article>
+                        <h1><?php the_title(); ?></h1>
+                        <div class=content>
+                            <div class=left>
+                                <?php if ( has_post_thumbnail() ) {
+	                                the_post_thumbnail();
+                                    }   
+                                ?>
+                            </div>
+                            <div class=right> <?php the_content(); ?> </div>
+                        </div>
+                    </article>
+                <?php endwhile; ?>
+            </div>
+        <?php else : ?>
+            <p>Aucun résultat</p>
+        <?php endif; ?>
+      </section>
+      <aside id="sidebar"></aside>
+  </div>
+
+  <footer id="footer">
+  </footer>
+  <?php wp_footer(); ?>
+</body>
+</html>
