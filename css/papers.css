@@ -8,3 +8,26 @@
 #header>.menu {
     background-color: gray;
 }
+
+article {
+    margin-left: 2em;
+}
+
+
+article .content {
+    display: flex;
+}
+
+article .content .left {
+    width: 10%;
+}
+
+article .content .left img {
+    width: 100%;
+    height: auto;
+}
+
+
+article .content .right {
+    margin-left: 1em;
+}
