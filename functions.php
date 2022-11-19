@@ -162,11 +162,11 @@ add_action('init', 'oteri_software_post_type');
 function my_rewrite_flush() {
     oteri_software_post_type();
     oteri_paper_post_type();
+    flush_rewrite_rules();
     
     global $wp_rewrite;
     $wp_rewrite->set_permalink_structure('/%category%/');
     $wp_rewrite->flush_rules();
-    flush_rewrite_rules();
 }
 //For debug purpose it is always executed
 my_rewrite_flush();
