@@ -1,0 +1,10 @@
+#header {
+    background: gray;
+    height: 2em;
+    position: relative;
+}
+
+
+#header>.menu {
+    background-color: gray;
+}
