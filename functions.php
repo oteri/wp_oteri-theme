@@ -157,10 +157,12 @@ function oteri_software_post_type() {
     );
 }
 add_action('init', 'oteri_software_post_type');
-
-add_action( 'after_switch_theme', 'my_rewrite_flush' );
+//For debug purpose is inactivated
+//add_action( 'after_switch_theme', 'my_rewrite_flush' );
 function my_rewrite_flush() {
     oteri_software_post_type();
     oteri_paper_post_type();
     flush_rewrite_rules();
 }
+//For debug purpose it is always executed
+my_rewrite_flush();
