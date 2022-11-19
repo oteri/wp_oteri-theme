@@ -132,9 +132,9 @@ function oteri_paper_post_type() {
 	register_post_type('papers',
 		array(
 			'labels'      => array(
-				'name'          => __( 'Papers', 'textdomain' ),
-				'singular_name' => __( 'Paper',  'textdomain' ),
-			),
+                                'name'          => __( 'Papers', 'textdomain' ),
+                                'singular_name' => __( 'Paper',  'textdomain' ),
+                            ),
 			'public'      => true,
 			'has_archive' => true,          
 			'rewrite'     => array( 'slug' => 'Papers' ), // my custom slug
@@ -147,9 +147,9 @@ function oteri_software_post_type() {
     register_post_type('softwares',
         array(
             'labels'      => array(
-                'name'          => __( 'Softwares', 'textdomain' ),
-                'singular_name' => __( 'Softwares',  'textdomain' ),
-            ),
+                                'name'          => __( 'Softwares', 'textdomain' ),
+                                'singular_name' => __( 'Softwares',  'textdomain' ),
+                            ),
             'public'      => true,
             'has_archive' => true,          
             'rewrite'     => array( 'slug' => 'Softwares' ), // my custom slug
