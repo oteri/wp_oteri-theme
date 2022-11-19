@@ -35,7 +35,7 @@
                 <?php endwhile; ?>
             </div>
         <?php else : ?>
-            <p>Aucun résultat</p>
+            <p>No paper found</p>
         <?php endif; ?>
       </section>
       <aside id="sidebar"></aside>
