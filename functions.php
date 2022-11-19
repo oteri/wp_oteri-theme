@@ -120,7 +120,6 @@ add_action( 'customize_register', 'oteri_social_network_options' );
 
 function add_theme_scripts() {
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
-
 //	wp_enqueue_style( 'slider', get_template_directory_uri() . '/css/slider.css', array(), '1.1', 'all' );
 	//wp_enqueue_script( 'script', get_template_directory_uri() . '/js/script.js', array( 'jquery' ), 1.1, true );
 }
@@ -138,6 +137,7 @@ function oteri_paper_post_type() {
 			'public'      => true,
 			'has_archive' => true,          
 			'rewrite'     => array( 'slug' => 'Papers' ), // my custom slug
+            'supports' => array( 'title', 'editor', 'thumbnail' )
 		)
 	);
 }
@@ -170,3 +170,23 @@ function my_rewrite_flush() {
 }
 //For debug purpose it is always executed
 my_rewrite_flush();
+
+
+
+if ( ! function_exists( 'oteri_setup' ) ) :
+	/**
+	 * Sets up theme defaults and registers support for various
+	 * WordPress features.
+	 *
+	 * Note that this function is hooked into the after_setup_theme
+	 * hook, which runs before the init hook. The init hook is too late
+	 * for some features, such as indicating support post thumbnails.
+	 */
+	function oteri_setup() {
+		/**
+		 * Enable support for post thumbnails and featured images for papers blog.
+		 */
+		add_theme_support( 'post-thumbnails', array( 'papers' ) );
+	}
+endif; // oteri_setup
+add_action( 'after_setup_theme', 'oteri_setup' );
