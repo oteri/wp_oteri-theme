@@ -8,12 +8,11 @@
     width: 100%;
     background: #f9f9f9;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     position: absolute;
     bottom: 5px;
     right: 0px;
     height: 100%;
-    vertical-align: middle;
 }
 
 .menu a {
@@ -23,10 +22,11 @@
 }
 
 .menu>.item {
-    flex-grow: 1;
     text-align: center;
     margin-top: auto;
     margin-bottom: auto;
+    margin-left: 1em;
+    margin-right: 1em;
 }
 
 

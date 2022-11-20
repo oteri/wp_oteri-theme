@@ -20,9 +20,12 @@ body {
 
 .menu {
     display: flex;
+    justify-content: center;
     position: absolute;
-    bottom: 5px;
-    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    background: black;
+    padding-bottom: 5px;
 }
 
 .menu a {
