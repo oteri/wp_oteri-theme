@@ -1,0 +1,62 @@
+body {
+    margin: 0px;
+}
+
+.profile_photo {
+    width: 227px;
+    height: 227px;
+    border-radius: 50%;
+}
+
+.header_container {
+    height: 22em;
+    overflow: hidden;
+    position: relative;
+}
+
+.header_container>img {
+    height: 100%;
+}
+
+.menu {
+    display: flex;
+    position: absolute;
+    bottom: 5px;
+    right: 0px;
+}
+
+.menu a {
+    color: white;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.menu>.item {
+    margin-right: 1em;
+    margin-left: 1em;
+}
+
+.social_network_profiles_menu {
+    width: 227px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.item img {
+    width: 3em;
+    height: 3em;
+}
+
+main {
+    display: flex;
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+.description>p {
+    font-size: x-large;
+}
+
+.description {
+    margin: 6em;
+}

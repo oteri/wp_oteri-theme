@@ -1,13 +1,40 @@
 #header {
-    background: gray;
-    height: 2em;
+    height: 4em;
     position: relative;
+    background: #f9f9f9;
+}
+
+.menu {
+    width: 100%;
+    background: #f9f9f9;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 5px;
+    right: 0px;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.menu a {
+    color: grey;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.menu>.item {
+    flex-grow: 1;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 
-#header>.menu {
-    background-color: gray;
-}
+
+
+
+
+
 
 article {
     margin-top: 2em;
