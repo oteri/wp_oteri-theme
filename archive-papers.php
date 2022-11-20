@@ -28,8 +28,7 @@
         <?php if(have_posts()) : ?>
             <div id="loop">
                <?php while(have_posts()) : the_post(); ?>
-                   <article>
-                        <h1><?php the_title(); ?></h1>
+                   <article>                        
                         <div class=content>
                             <div class=left>
                                 <?php if ( has_post_thumbnail() ) {
@@ -37,7 +36,10 @@
                                     }   
                                 ?>
                             </div>
-                            <div class=right> <?php the_content(); ?> </div>
+                            <div class=right> 
+                              <h1><?php the_title(); ?></h1>
+                              <?php the_content(); ?> 
+                            </div>
                         </div>
                     </article>
                 <?php endwhile; ?>
