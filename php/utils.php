@@ -1,4 +1,5 @@
 <?php
+// TO DO: Moving menu generation to the admin interface rather then hard coding it
 function get_navigation_menu(){
         $menu = array("Home"=>"", "Papers"=>"Papers", "Softwares"=>"Softwares", "Blog"=>"Blog");        
         echo "<div class=menu>";
