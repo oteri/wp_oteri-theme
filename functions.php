@@ -144,15 +144,15 @@ function oteri_paper_post_type() {
 add_action('init', 'oteri_paper_post_type');
 
 function oteri_software_post_type() {
-    register_post_type('softwares',
+    register_post_type('software',
         array(
             'labels'      => array(
-                                'name'          => __( 'Softwares', 'textdomain' ),
-                                'singular_name' => __( 'Softwares',  'textdomain' ),
+                                'name'          => __( 'Software', 'textdomain' ),
+                                'singular_name' => __( 'Software',  'textdomain' ),
                             ),
             'public'      => true,
             'has_archive' => true,          
-            'rewrite'     => array( 'slug' => 'Softwares' ), // my custom slug
+            'rewrite'     => array( 'slug' => 'Software' ), // my custom slug
         )
     );
 }
