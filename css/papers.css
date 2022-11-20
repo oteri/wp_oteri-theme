@@ -26,6 +26,7 @@ article .content {
 
 article .content .left {
     width: 20em;
+    flex-shrink: 0;
 }
 
 article .content .left img {
