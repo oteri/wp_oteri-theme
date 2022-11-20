@@ -12,8 +12,12 @@
 article {
     margin-top: 2em;
     margin-bottom: 1em;
-    margin-right: 2em;
+    margin-right: 3em;
+    margin-left: 3em;
     padding: 1em;
+    border: gray solid 1px;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 article .content {
@@ -34,15 +38,10 @@ article .content .right {
     margin-left: 5em
 }
 
-body {
-    background: #e8ecf0;
-}
 
 #content {
-    margin-left: 15em;
-    margin-right: 15em;
-    border-right: lightgray solid 1px;
-    border-left: lightgray solid 1px;
+    margin-left: 12em;
+    margin-right: 12em;
     background: white;
 }
 
