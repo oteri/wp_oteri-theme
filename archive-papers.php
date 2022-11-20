@@ -14,9 +14,17 @@
   <header id="header">
     <?php get_navigation_menu(); ?>
   </header>
-
     <div id="wrap">
         <section id="content">
+        <?php
+          $args = array('post_type' => 'papers', 
+                        'post_status' => 'public', 
+                        'perm' => 'readable');
+          $query = new WP_Query( $args );
+          echo "<h2 class=message> List of the ".$query->post_count." papers I have authored or co-authored so far</h2>";
+        ?>
+
+
         <?php if(have_posts()) : ?>
             <div id="loop">
                <?php while(have_posts()) : the_post(); ?>
