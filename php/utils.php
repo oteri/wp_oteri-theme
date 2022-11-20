@@ -18,6 +18,7 @@ function get_navigation_menu(){
 
         $menu = array_merge($menu,array('Blog'));
         echo "<div class=menu>";
+        echo '<div class=item><a target=_blank href=/>Home</a></div>';
         foreach ($menu as $item) { 
         echo '<div class=item><a target=_blank href=/'.$item.'>'.$item.'</a></div>';
         }
