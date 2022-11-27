@@ -7,15 +7,16 @@
         <link rel="profile" href="http://gmpg.org/xfn/11" />
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
         <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
+        <link rel="stylesheet" href="<?php echo get_template_directory_uri().'/css/style.css' ?>" type="text/css">
         <link rel="stylesheet" href="<?php echo get_template_directory_uri().'/css/home.css' ?>" type="text/css">
   <?php wp_head(); ?>
     </head>
 
+<header id="header">
+    <?php get_navigation_menu(); ?>
+</header>
     
-<div class=header_container>
-  <img alt="" src="<?php header_image(); ?>" >
-    <?php get_navigation_menu("bottom"); ?>
-</div>
+<div class=header_container><img alt="" src="<?php header_image(); ?>" ></div>
 
 <main>
 <div class=profile_photo_container><img class="profile_photo" alt="" src="<?php echo get_theme_mod("oteri_profile_photo"); ?>">

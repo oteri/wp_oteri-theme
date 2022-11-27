@@ -11,33 +11,12 @@ body {
 .header_container {
     height: 22em;
     overflow: hidden;
-    position: relative;
 }
 
 .header_container>img {
     height: 100%;
 }
 
-.menu {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    background: black;
-    padding-bottom: 5px;
-}
-
-.menu a {
-    color: white;
-    font-weight: bold;
-    font-size: x-large;
-}
-
-.menu>.item {
-    margin-right: 1em;
-    margin-left: 1em;
-}
 
 .social_network_profiles_menu {
     width: 227px;

@@ -4,31 +4,6 @@
     background: #f9f9f9;
 }
 
-.menu {
-    width: 100%;
-    background: #f9f9f9;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    bottom: 5px;
-    right: 0px;
-    height: 100%;
-}
-
-.menu a {
-    color: grey;
-    font-weight: bold;
-    font-size: x-large;
-}
-
-.menu>.item {
-    text-align: center;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 1em;
-    margin-right: 1em;
-}
-
 article {
     height: 15em;
     margin-top: 2em;
