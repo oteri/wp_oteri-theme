@@ -137,7 +137,7 @@ function oteri_paper_post_type() {
 			'public'      => true,
 			'has_archive' => true,          
 			'rewrite'     => array( 'slug' => 'Papers' ), // my custom slug
-            'supports' => array( 'title', 'editor', 'thumbnail' )
+            'supports' => array( 'title', 'editor', 'thumbnail' ),
 		)
 	);
 }
@@ -153,6 +153,7 @@ function oteri_software_post_type() {
             'public'      => true,
             'has_archive' => true,          
             'rewrite'     => array( 'slug' => 'Software' ), // my custom slug
+            'supports' => array( 'title', 'editor', 'thumbnail' ),
         )
     );
 }
