@@ -147,7 +147,7 @@ function oteri_software_post_type() {
     register_post_type('software',
         array(
             'labels'      => array(
-                                'name'          => __( 'Software', 'textdomain' ),
+                                'name'          => __( 'Softwares', 'textdomain' ),
                                 'singular_name' => __( 'Software',  'textdomain' ),
                             ),
             'public'      => true,
