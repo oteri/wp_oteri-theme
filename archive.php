@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <title><?php wp_title(''); ?></title>
   <link rel="stylesheet" href="<?php echo get_template_directory_uri().'/css/style.css' ?>" type="text/css">
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri().'/css/papers.css' ?>" type="text/css">
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri().'/css/collections.css' ?>" type="text/css">
   <?php wp_head(); ?>
 </head>
 <body>
@@ -15,16 +15,15 @@
   </header>
     <div id="wrap">
         <section id="content">
-        <?php
-          $args = array('post_type' => 'papers', 
-                        'post_status' => 'public', 
-                        'perm' => 'readable');
-          $query = new WP_Query( $args );
-          echo "<h2 class=message> List of the ".$query->post_count." papers I have authored or co-authored so far</h2>";
-        ?>
-
-
-        <?php if(have_posts()) : ?>
+          <?php if(have_posts()) : ?>
+            <?php
+              $name = '';
+              if(array_key_exists('category_name',$wp_query->query))
+                $name = $wp_query->query['category_name'];
+              else
+                $name = $wp_query->query['post_type'];
+              echo "<h2 class=message> List of the ".$wp_query->post_count." ".$name." I have authored or co-authored so far</h2>" 
+            ?>
             <div id="loop">
                <?php while(have_posts()) : the_post(); ?>
                    <article>                        
@@ -44,7 +43,7 @@
                 <?php endwhile; ?>
             </div>
         <?php else : ?>
-            <p>No paper found</p>
+            <h2> No content available</h2>
         <?php endif; ?>
       </section>
       <aside id="sidebar"></aside>
