@@ -9,12 +9,13 @@ body {
 }
 
 .header_container {
-    height: 22em;
+    height: 19em;
     overflow: hidden;
 }
 
 .header_container>img {
-    height: 100%;
+    overflow: hidden;
+    width: 100%;
 }
 
 
