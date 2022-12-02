@@ -117,11 +117,15 @@ add_action( 'customize_register', 'oteri_description_option' );
 add_action( 'customize_register', 'oteri_social_network_options' );
 
 
-
 function add_theme_scripts() {
-	wp_enqueue_style( 'style', get_stylesheet_uri() );
-//	wp_enqueue_style( 'slider', get_template_directory_uri() . '/css/slider.css', array(), '1.1', 'all' );
-	//wp_enqueue_script( 'script', get_template_directory_uri() . '/js/script.js', array( 'jquery' ), 1.1, true );
+    wp_enqueue_style( 'style', get_stylesheet_uri() );
+// Load bootstrap in the theme. 
+/*Integrating bootstrap in an extension is different:
+wp_enqueue_script( 'bootstrap-js', plugins_url( '/bootstrap/js/bootstrap.min.js', __FILE__ ), array( 'jquery' ), null, true );
+wp_enqueue_style( 'bootstrap-css',plugins_url( '/bootstrap/css/bootstrap.min.css', __FILE__ ) );
+*/
+    wp_enqueue_script( 'bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js', array( 'jquery' ), null, true );
+    wp_enqueue_style( 'bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css');    
 }
 add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
 
