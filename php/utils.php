@@ -2,8 +2,18 @@
 // TO DO: Moving menu generation to the admin interface rather then hard coding it
 function get_navigation_menu(){
     $items = array("Home"=>"", "Papers"=>"Papers", "Software"=>"Software", "Blog"=>"Blog");        
+    get_menu($items);
     get_navbar($items);
 }
+//Print the menu which is activated on PC
+function get_menu($menu){
+  echo '<ul class="navbar nav bg-light justify-content-center">';
+    foreach ($menu as $name => $url) { 
+        echo '<li class="nav-item"><a class="nav-link" aria-current="page" href=/'.$url.'>'.$name.'</a></li>';
+    }
+    echo '</ul>';
+}
+
 //Print the navbar which is activated on mobile
 function get_navbar($menu){
 echo '<nav class="navbar bg-light fixed-top">
