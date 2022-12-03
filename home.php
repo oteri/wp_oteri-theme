@@ -16,23 +16,26 @@
     
 <div class=header_container><img alt="" src="<?php header_image(); ?>" ></div>
 
-<main>
-<div class=profile_photo_container><img class="profile_photo" alt="" src="<?php echo get_theme_mod("oteri_profile_photo"); ?>">
-<div class=social_network_profiles_menu>
-<?php
-      $supported_social_networks = array("Github", "Linkedin", "Twitter", "Medium");
-      foreach ($supported_social_networks as $network) { 
-        $name = 'oteri_'. strtolower($network);
-        $url = get_theme_mod($name);
-        if($url=="")
-            continue;  
-        $src = get_template_directory_uri().'/img/'.$network.'.png';
-        echo '<div class=item><a target=_blank href='.$url.'><img src='.$src.'></img></a></div>';
-      }
-?>
-</div>
-</div>
-<div class="description"><?php echo get_theme_mod("oteri_description") ?></div>
+<main class=container>
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-4 text-center">
+      <div><img class="profile_photo" alt="" src="<?php echo get_theme_mod("oteri_profile_photo"); ?>"></div>
+      <div class=social_network_profiles_menu>
+              <?php
+                    $supported_social_networks = array("Github", "Linkedin", "Twitter", "Medium");
+                    foreach ($supported_social_networks as $network) { 
+                      $name = 'oteri_'. strtolower($network);
+                      $url = get_theme_mod($name);
+                      if($url=="")
+                          continue;  
+                      $src = get_template_directory_uri().'/img/'.$network.'.png';
+                      echo '<div class=item><a target=_blank href='.$url.'><img src='.$src.'></img></a></div>';
+                    }
+              ?>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-8 description"><?php echo get_theme_mod("oteri_description") ?></div>
+  </div>
 </main>
 
 <footer id="footer">

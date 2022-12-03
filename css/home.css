@@ -9,7 +9,7 @@ body {
 }
 
 .header_container {
-    height: 19em;
+    max-height: 19rem;
     overflow: hidden;
 }
 
@@ -20,9 +20,8 @@ body {
 
 
 .social_network_profiles_menu {
-    width: 227px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .item img {
@@ -36,10 +35,25 @@ main {
     margin-left: 1em;
 }
 
-.description>p {
-    font-size: x-large;
+
+.container {
+    --bs-gutter-x: 2.5rem;
 }
 
-.description {
-    margin: 6em;
+
+@media (min-width: 0px) {
+    .description {
+        font-size: large;
+        margin-top: 2em;
+    }
+}
+
+
+
+@media (min-width: 992px) {
+    .description {
+        font-size: x-large;
+        margin-top: 0em;
+        font-size: x-large;
+    }
 }
