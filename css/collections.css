@@ -41,3 +41,8 @@ article .content .right {
 .message {
     margin-left: 2em;
 }
+
+.wp-post-image {
+    max-width: 100%;
+    height: auto;
+}
