@@ -35,7 +35,7 @@
                               ?>
 
                       </div>
-                      <div class="col-sm-12 col-md-12 col-lg-8">
+                      <div class="col-sm-12 col-md-12 col-lg-8 mt-4">
                         <h5 ><?php the_title(); ?></h5>
                         <p ><?php the_content(); ?></p>
                       </div>
