@@ -19,7 +19,7 @@
 <main class=container>
   <div class="row">
     <div class="col-sm-12 col-md-12 col-lg-4 text-center">
-      <div><img class="profile_photo" alt="" src="<?php echo get_theme_mod("oteri_profile_photo"); ?>"></div>
+      <div class="profile_container"><img class="profile_photo" alt="" src="<?php echo get_theme_mod("oteri_profile_photo"); ?>"></div>
       <div class=social_network_profiles_menu>
               <?php
                     $supported_social_networks = array("Github", "Linkedin", "Twitter", "Medium");
