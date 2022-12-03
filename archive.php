@@ -26,20 +26,27 @@
             ?>
             <div id="loop">
                <?php while(have_posts()) : the_post(); ?>
-                   <article>                        
-                        <div class=content>
-                            <div class=left>
-                                <?php if ( has_post_thumbnail() ) {
-	                                the_post_thumbnail();
-                                    }   
-                                ?>
-                            </div>
-                            <div class=right> 
-                              <h1><?php the_title(); ?></h1>
-                              <?php the_content(); ?> 
-                            </div>
+
+
+               <div class="card mb-3">
+                  <div class="row g-0">
+                    <div class="col-sm-4 col-md-4 mb-auto mt-auto">
+                        <div class="text-center p-4" > 
+                          <?php 
+                              if ( has_post_thumbnail() ) {
+                                    the_post_thumbnail($size = 'medium');
+                                  }   
+                          ?>
                         </div>
-                    </article>
+                    </div>
+                    <div class="col-sm-8 col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title"><?php the_title(); ?></h5>
+                        <p class="card-text"><?php the_content(); ?></p>
+                      </div>
+                   </div>
+                  </div>
+              </div>
                 <?php endwhile; ?>
             </div>
         <?php else : ?>
