@@ -13,8 +13,8 @@
   <header id="header">
     <?php get_navigation_menu(); ?>
   </header>
-    <div id="wrap">
-        <section id="content">
+
+        <section class ="container">
           <?php if(have_posts()) : ?>
             <?php
               $name = '';
@@ -24,9 +24,8 @@
                 $name = $wp_query->query['post_type'];
               echo "<h2 class=message> List of the ".$wp_query->post_count." ".$name." I have authored or co-authored so far</h2>" 
             ?>
-            <div class ="container"id="loop">
                <?php while(have_posts()) : the_post(); ?>              
-               <div class="row">
+               <article class="row">
                       <div class="col-sm-12 col-md-12 col-lg-4 text-center">
 
                               <?php 
@@ -40,16 +39,13 @@
                         <h5 ><?php the_title(); ?></h5>
                         <p ><?php the_content(); ?></p>
                       </div>
-              </div>
+              </article>
             <?php endwhile; ?>
-          </div>
         <?php else : ?>
             <h2> No content available</h2>
         <?php endif; ?>
       </section>
       <aside id="sidebar"></aside>
-  </div>
-
   <footer id="footer">
   </footer>
   <?php wp_footer(); ?>
